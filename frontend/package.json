@@ -1,0 +1,41 @@
+{
+  "name": "charliemathews",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --config=config/webpack.config.js --colors --profile",
+    "build-parallel": "./node_modules/.bin/parallel-webpack --config=config/webpack.config.js --colors -m=0 --profile --no-stats --",
+    "build:watch": "yarn build --watch --env=prod",
+    "build:dev": "yarn build:watch --env=dev",
+    "build:prod": "yarn build-parallel --env=prod",
+    "lint": "yarn run lint:css",
+    "lint:css": "yarn run lint:css:console; yarn run lint:css:file",
+    "lint:css:console": "./node_modules/.bin/sass-lint -c config/sass-lint.yml css/*.scss -v",
+    "lint:css:file": "./node_modules/.bin/sass-lint -c config/sass-lint.yml -f checkstyle -o ../reports/css.checkstyle.xml css/*.scss -v"
+  },
+  "author": {
+    "name": "Charlie Mathews",
+    "email": "charlie@charliemathews.com",
+    "url": "http://charliemathews.com"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "normalize.css": "*"
+  },
+  "devDependencies": {
+    "autoprefixer": "*",
+    "css-loader": "*",
+    "extract-loader": "*",
+    "file-loader": "*",
+    "node-sass": "*",
+    "normalize.css": "*",
+    "parallel-webpack": "*",
+    "postcss-loader": "*",
+    "resolve-url-loader": "*",
+    "sass-lint": "*",
+    "sass-loader": "*",
+    "webpack": "*",
+    "webpack-cli": "*",
+    "webpack-merge": "*"
+  },
+  "dependencies": {}
+}
