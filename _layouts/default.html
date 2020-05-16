@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+This website was developed by Charlie Mathews (charlie@charliemathews.com).
+All code, images, and content are the intellectual property of Charlie Mathews (c) from 2016 onwards, unless otherwise noted.
+-->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, user-scalable=yes">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ "static/dist/style.css" | relative_url }}" />
+	<title>Charlie Mathews</title>
+	<link rel="icon" href="/favicon.svg">
+</head>
+
+<body>
+
+<div id="nav_curtain"></div>
+<div id="fadeout"></div>
+
+<div id="column">
+	<header>
+		<a id="logo" href="/">
+		<div id="picture_border"><div id="picture"></div></div>
+		<div id="title">Charlie Mathews</div>
+		</a>
+
+		<nav>
+			<div id="burger">
+				<div class="bun	bun-top"></div>
+				<div class="bun bun-mid"></div>
+				<div class="bun bun-bot"></div>
+			</div>
+
+			<div id="menu">
+				<ul>
+				  <li><a class="link" href="https://github.com/alphachai"><div class="icon_wrap"><svg title="Github" class="icon icon_github"><use xlink:href="{{ "static/img/icons.svg" | relative_url }}#logo-github"/></svg></div> github</a></li>
+				  <li><a class="link" href="https://linkedin.com/in/charlesparkes"><div class="icon_wrap"><svg title="Linkedin" class="icon icon_linkedin"><use xlink:href="{{ "static/img/icons.svg" | relative_url }}#logo-linkedin"/></svg></div> linkedin</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<section id="content">
+		{{ content }}
+	</section>
+
+	<footer>Crafted with &hearts; by Charlie.</footer>
+</div> <!-- end of #column -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="{{ "static/js/relax.js" | relative_url }}"></script>
+	<script src="{{ "static/js/modal.js" | relative_url }}"></script>
+	<script src="{{ "static/dist/main.js" | relative_url }}"></script>
+
+</body>
+</html>
