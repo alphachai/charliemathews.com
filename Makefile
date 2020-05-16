@@ -54,3 +54,8 @@ test:
 clean: bh/clean
 	@exit 0
 .PHONY: clean
+
+.PHONY: run
+run:
+	@bundler install
+	@bundle exec jekyll serve

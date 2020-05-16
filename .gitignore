@@ -110,3 +110,5 @@ staticfiles
 *build-harness
 config.txt
 frontend/node_modules*
+.jekyll-cache
+_site

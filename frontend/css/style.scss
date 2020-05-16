@@ -1,8 +1,6 @@
 @import "~normalize.css";
 @import 'mixins';
 @import 'colors';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600,700');
-@import url('https://fonts.googleapis.com/css?family=PT+Serif');
 
 // SOURCE: https://css-tricks.com/snippets/css/clear-fix/
 .clear:after {
@@ -13,18 +11,6 @@
 
 @media all
 {
-	// Effects & Animations
-	// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-	@include keyframes(preloader) {
-		0% { @include transform_rotate(0deg) }
-		50% { @include transform_rotate(180deg); background:$color_preloadSecondary; }
-		100% { @include transform_rotate(360deg); }
-	}
-
-	@include keyframes(spin) {
-		100% { @include transform_rotate(360deg); }
-	}
-
 	// General
 	// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 	html, body {
@@ -69,93 +55,12 @@
 	    );
 	}
 
-	/* Loading animation */
-	/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-	.off {
-		-moz-animation-name: none !important ;
-		-webkit-animation-name: none !important ;
-		-ms-animation-name: none !important ;
-		animation-name: none !important ;
-	}
-
-	@keyframes rotate_360 {
-		100% {transform:rotate(360deg);}
-	}
-	@-webkit-keyframes rotate_360 {
-		100% {-webkit-transform: rotate(360deg);}
-	}
-	@-moz-keyframes rotate_360 {
-		100% {-moz-transform: rotate(360deg);}
-	}
-	@-ms-keyframes rotate_360 {
-		100% {-ms-transform: rotate(360deg);}
-	}
-
-	#loading {
-		position: fixed ;
-		top: 0 ;
-		left: 0 ;
-		width: 100% ;
-		height: 100% ;
-		z-index: 200 ;
-		background: $color_loadingBackground ;
-	}
-
-  #preloader-wrap {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		@include transform_translate(-50%, -50%);
-	}
-
-	#preloader {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-top: -15px;
-		margin-left: -15px;
-		width: 30px;
-		height: 30px;
-		background: $color_preloadSecondary;
-		@include border-radius(50px); //border-radius: 50px;
-		@include animation(spin 0.5s infinite linear);
-
-		&:after {
-			position:absolute;
-			width:50px;
-			height:50px;
-			border-top:2px solid $color_preloadPrimary;
-			border-bottom:2px solid $color_preloadPrimary;
-			border-left:2px solid transparent;
-			border-right:2px solid transparent;
-			@include border-radius(50px); //border-radius: 50px;
-			content:'';
-			top:-12px;
-			left:-12px;
-		}
-	}
-
-	#preloader-tag {
-		position: absolute ;
-		top: 50% ;
-		left: 50% ;
-		margin-left: -100px ;
-		margin-top: 70px ;
-		width: 200px ;
-		text-align: center ;
-		font-family: 'Raleway', sans-serif ;
-		font-weight: 400 ;
-		font-size: 1.4em ;
-		text-transform: uppercase ;
-		color: #FFFFFF ;
-	}
-
 	/* Header / Title */
 	/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 	$header_height: 50px ;
 
 	header {
-		padding: 50px 0 30px ;
+		padding: 50px 0 0 ;
 		width: auto ;
 		height: $header_height ;
 		clear: both ;
@@ -165,6 +70,7 @@
 			float: left ;
 			z-index: 20 ;
 			position: relative ;
+      text-decoration: none;
 		}
 
 		$titlePhoto_borderWidth: 0px ;
@@ -188,14 +94,19 @@
 		}
 
 		& #title {
-			float: left ;
+			// float: left ;
 			font-family: 'Open Sans', sans-serif ;
 			font-size: 30px ;
 			color: $color_title ;
-			margin-left: 20px ;
-			margin-top: 4px ;
+			// margin-left: 20px ;
+			// margin-top: 7px ;
 			font-weight: 300 ;
 			z-index: 15 ;
+      height: 50px;
+      width: auto;
+      vertical-align: middle;
+      display: table-cell;
+      padding-left: 20px;
 		}
 	}
 
@@ -208,41 +119,30 @@
   $icon_padding : 4px;
 
   .icon_wrap {
-    // background-color: rgba(#fff, .2);
-    // border-radius: 50%;
     float: left;
     padding: 0 $icon_padding;
     width: $icon_size;
     height: $icon_size;
+    display: inline-block;
+    color: #FFF;
 
-    a {
-      display: inline-block;
-      color: #FFF;
-
-      .icon {
-        max-width: 100%;
-        vertical-align: top;
-        width: $icon_size;
-        height: $icon_size;
-      }
-
-      &:hover {
-        //background-color: rgba(#fff, .7);
-
-        .icon {
-          //color: #DDD;
-          color: #FFF;
-        }
-        .icon_youtube {
-          color: $color_youtube;
-        }
-        .icon_instagram {
-          color: $color_instagram;
-        }
-        .icon_linkedin {
-          color: $color_linkedin;
-        }
-      }
+    .icon {
+      max-width: 100%;
+      vertical-align: middle;
+      width: $icon_size;
+      height: $icon_size;
+    }
+    .icon_youtube {
+      color: $color_youtube;
+    }
+    .icon_instagram {
+      color: $color_instagram;
+    }
+    .icon_linkedin {
+      color: $color_linkedin;
+    }
+    .icon_github {
+      color: $color_github;
     }
   }
 
@@ -376,7 +276,7 @@
 	/* Content */
 	/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 	#content {
-		padding: 50px 0 ;
+		padding: 30px 0 ;
 		width: auto ;
 		margin: auto ;
 		clear: both ;
