@@ -16,11 +16,21 @@
 	html, body {
 		width: 100% ;
 		color: $color_defaultFontColor ;
+    line-height: normal ;
 	}
 
-	h2 {
+	h1 {
 		margin: 0 ;
 	}
+
+  a {
+    color: #0366d6 ;
+    text-decoration: none ;
+
+    &:hover {
+      text-decoration: underline ;
+    }
+  }
 
 	#column {
 		margin: 0 auto ;
@@ -120,7 +130,7 @@
 
   .icon_wrap {
     float: left;
-    padding: 0 $icon_padding;
+    // padding: 0 $icon_padding;
     width: $icon_size;
     height: $icon_size;
     display: inline-block;
@@ -191,6 +201,7 @@
 					padding-left: 0px ;
 					@include transition(all .1s ease);
 					//border-bottom: 3px solid #FFF ;
+          min-width: 125px;
 
 					&:hover {
 						padding-left: 8px ;
@@ -280,10 +291,32 @@
 		width: auto ;
 		margin: auto ;
 		clear: both ;
+    font-family: 'Open Sans', serif ;
 	}
 
+  h1 {
+    font-size: 57px ;
+    font-weight: 700 ;
+    letter-spacing: -0.04em ;
+    line-height: 1em ;
+    margin-left: -4px ;
+    margin-bottom: 10px ;
+    margin-top: 48px ;
+    color: #222222 ;
+  }
+
+  h2 {
+    font-size: 38px ;
+    font-weight: 400 ;
+    letter-spacing: -0.04em ;
+    line-height: 1em ;
+    margin-left: -4px ;
+    // margin-bottom: 10px ;
+    // margin-top: 48px ;
+    color: #333 ;
+  }
+
 	article {
-		font-family: 'Open Sans', serif ;
 		clear: both ;
 		margin-bottom: 10px ;
 		@include transition(all .8s ease);
@@ -302,17 +335,6 @@
 			height: 250px ;
 			background: url(../uploads/2017-03-02-rose.jpg) center no-repeat;
 			background-size: cover;
-		}
-
-		& > h2 {
-			font-size: 57px ;
-			font-weight: 700 ;
-			letter-spacing: -0.04em ;
-			line-height: 1em ;
-			margin-left: -4px ;
-			margin-bottom: 10px ;
-			margin-top: 48px ;
-			color: #222222 ;
 		}
 
 		& .body {
@@ -343,6 +365,50 @@
 			}
 		}
 	}
+
+  #projects_display {
+    display: flex ;
+    flex-wrap: wrap;
+    margin: 0 -16px ;
+    margin-left: -8px ;
+    margin-right: -8px ;
+
+    & .project {
+      padding-left: 8px ;
+      padding-right: 8px ;
+      flex: 1 1 0 ;
+      display: flex ;
+      margin-bottom: 16px ;
+
+      & .project_inner {
+        border: 1px solid #d1d5da;
+        @include border-radius(3px) ;
+        padding: 16px ;
+        align-content: stretch ;
+
+        &:hover {
+          border: 1px solid #b5b8bc;
+        }
+      }
+
+      & .name {
+        display: block ;
+        float: left ;
+        margin-bottom: 8px ;
+
+        > .icon_wrap {
+          margin-right: 8px ;
+        }
+      }
+
+      & .desc {
+        float: left ;
+  			color: #A1A1A1 ;
+  			font-size: 14px ;
+  			width: 100% ;
+      }
+    }
+  }
 }
 
 /* Footer */
@@ -369,7 +435,7 @@ footer {
 		width: 500px ;
 	}
 
-	article > h2 {
+	h1 {
 		font-size: 35px ;
 	}
 
@@ -427,7 +493,7 @@ footer {
 		}
 	}
 
-	article > h2 {
+	h1 {
 		font-size: 24px ;
 	}
 
@@ -440,6 +506,12 @@ footer {
 		font-size: 22px ;
 		line-height: 1.2em ;
 	}
+
+  #projects_display {
+    & .project {
+      flex-basis: 100% ;
+    }
+  }
 }
 
 @media (max-width: 450px)
@@ -467,7 +539,7 @@ footer {
 
 @media (max-width: 290px)
 {
-	article > h2 {
+	h1 {
 		font-size: 18px ;
 	}
 

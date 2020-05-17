@@ -1,6 +1,6 @@
 - name: build-harness
-  desc: 🤖Collection of Makefiles to facilitate building Python/Golang projects, Dockerfiles, and more
+  desc: 🤖 Collection of Makefiles to facilitate building Python/Golang projects, Dockerfiles, and more
   url: https://github.com/mintel/build-harness
 - name: lpipe
-  desc: 🐑Lambda Pipeline, a toolkit for writing clear, minimal Python FAAS
+  desc: 🐑 Lambda Pipeline, a toolkit for writing clear, minimal Python FAAS
   url: https://github.com/mintel/lpipe
