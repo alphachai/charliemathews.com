@@ -29,33 +29,20 @@ All code, images, and content are the intellectual property of Charlie Mathews (
 		<div id="title">Charlie Mathews</div>
 		</a>
 
-		<nav>
-			<div id="burger">
-				<div class="bun	bun-top"></div>
-				<div class="bun bun-mid"></div>
-				<div class="bun bun-bot"></div>
-			</div>
-
-			<div id="menu">
-				<ul>
-				  <li><a class="link" href="https://github.com/alphachai"><div class="icon_wrap"><svg title="Github" class="icon icon_github"><use xlink:href="{{ "static/img/icons.svg" | relative_url }}#logo-github"/></svg></div> github</a></li>
-				  <li><a class="link" href="https://linkedin.com/in/charlesparkes"><div class="icon_wrap"><svg title="Linkedin" class="icon icon_linkedin"><use xlink:href="{{ "static/img/icons.svg" | relative_url }}#logo-linkedin"/></svg></div> linkedin</a></li>
-				</ul>
-			</div>
-		</nav>
+		<div id="social">
+			<ul>
+				<li><a class="link" href="https://github.com/alphachai"><div class="icon_wrap"><svg title="Github" class="icon icon_github"><use xlink:href="{{ "static/img/icons.svg" | relative_url }}#logo-github"/></svg></div></a></li>
+				<li><a class="link" href="https://linkedin.com/in/charlesparkes"><div class="icon_wrap"><svg title="Linkedin" class="icon icon_linkedin"><use xlink:href="{{ "static/img/icons.svg" | relative_url }}#logo-linkedin"/></svg></div></a></li>
+			</ul>
+		</div>
 	</header>
 
 	<section id="content">
 		{{ content }}
 	</section>
 
-	<footer>Crafted with &hearts; by Charlie.</footer>
+	<footer><a href="https://github.com/alphachai/alphachai.github.io">Crafted with &hearts; by Charlie.</a></footer>
 </div> <!-- end of #column -->
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<script src="{{ "static/js/relax.js" | relative_url }}"></script>
-	<script src="{{ "static/js/modal.js" | relative_url }}"></script>
-	<script src="{{ "static/dist/main.js" | relative_url }}"></script>
 
 </body>
 </html>

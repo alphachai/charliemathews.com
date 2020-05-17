@@ -9,7 +9,6 @@ layout: default
   <div class="project">
     <div class="project_inner clear">
       <div class="name clear">
-        <div class="icon_wrap"><svg title="Github" class="icon icon_github"><use xlink:href="{{ "static/img/icons.svg" | relative_url }}#logo-github"/></svg></div>
         <a href="{{ project.url }}">{{ project.name }}</a>
       </div>
       <div class="desc clear">{{ project.desc }}</div>
@@ -18,12 +17,16 @@ layout: default
 {% endfor %}
 </div>
 
-## Posts
+<!-- <hr class="underline"> -->
 
-<ul id="posts">
+## Timeline
+
+<ul id="feed">
   {% for post in site.posts %}
+  {% if post.hidden != true %}
     <li>
-      <a href="{{ post.url }}"><span style="font-weight: bold">{{ post.date | date: "%Y-%m-%d" }}</span> {{ post.title }}</a>
+      <a href="{{ post.url }}"><span style="font-weight: bold">{{ post.date | date: "%Y-%m-%d" }}</span> {{ post.title }} ({{ post.layout }})</a>
     </li>
+  {% endif %}
   {% endfor %}
 </ul>
