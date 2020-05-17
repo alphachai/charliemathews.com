@@ -4,3 +4,6 @@
 - name: lpipe
   desc: 🐑 Lambda Pipeline, a toolkit for writing clear, minimal Python FAAS
   url: https://github.com/mintel/lpipe
+- name: slosh
+  desc: 💦 AWS S3 bucket API written in Python using FastAPI and Uvicorn
+  url: https://github.com/alphachai/slosh
