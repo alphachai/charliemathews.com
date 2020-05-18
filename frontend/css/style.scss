@@ -15,17 +15,36 @@
 	// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 	html, body {
 		width: 100%;
-		color: $color_defaultFontColor;
+		color: $color_primary;
 		font-family: 'Open Sans', sans-serif;
 		line-height: normal;
+		background-color: $color_background ;
 	}
 
 	h1 {
-		margin: 0;
+		font-size: 57px;
+		font-weight: 700;
+		letter-spacing: -0.04em;
+		line-height: 1em;
+		margin-left: -3px;
+		margin-bottom: 10px;
+		margin-top: 48px;
+		color: #222222;
+	}
+
+	h2 {
+		font-size: 38px;
+		font-weight: 400;
+		letter-spacing: -0.04em;
+		line-height: 1em;
+		margin-left: -3px;
+		// margin-bottom: 10px;
+		// margin-top: 48px;
+		color: #333;
 	}
 
 	a {
-		color: #0366d6;
+		color: $color_links;
 		text-decoration: none;
 
 		&:hover {
@@ -35,7 +54,7 @@
 
 	.underline {
 		border-width: 0 0 1px 0;
-		border-bottom: 1px solid #d1d5da !important;
+		border-bottom: 1px solid $color_borders !important;
 	}
 
 	#column {
@@ -96,7 +115,7 @@
 			float: left;
 			padding: $titlePhoto_borderWidth;
 			@include border-radius($header_height/2);
-			@include box-shadow(0, 0, 0px, 0px, #afafaf);
+			// @include box-shadow(0, 0, 0px, 0px, #afafaf);
 			z-index: 15;
 		}
 
@@ -138,7 +157,7 @@
 		width: $icon_size;
 		height: $icon_size;
 		display: inline-block;
-		color: #FFF;
+		color: $color_icon;
 
 		.icon {
 			max-width: 100%;
@@ -187,28 +206,6 @@
 		font-family: 'Open Sans', serif;
 	}
 
-	h1 {
-		font-size: 57px;
-		font-weight: 700;
-		letter-spacing: -0.04em;
-		line-height: 1em;
-		margin-left: -3px;
-		margin-bottom: 10px;
-		margin-top: 48px;
-		color: #222222;
-	}
-
-	h2 {
-		font-size: 38px;
-		font-weight: 400;
-		letter-spacing: -0.04em;
-		line-height: 1em;
-		margin-left: -3px;
-		// margin-bottom: 10px;
-		// margin-top: 48px;
-		color: #333;
-	}
-
 	article {
 		clear: both;
 		margin-bottom: 10px;
@@ -216,7 +213,7 @@
 
 		& .meta {
 			text-transform: uppercase;
-			color: #A1A1A1;
+			color: $color_meta;
 			font-size: 14px;
 			width: 100%;
 			text-align: left;
@@ -239,7 +236,7 @@
 				font-weight: 400;
 				font-size: 21px;
 				line-height: 35px;
-				color: #2E2E2E;
+				color: $color_secondary;
 			}
 
 			& blockquote {
@@ -247,14 +244,13 @@
 					font-size: 36px;
 					line-height: 1.5em;
 					margin-bottom: 10px;
-					color: #2E2E2E;
+					color: $color_secondary;
 				}
 
 				& p {
 					margin-top: 0;
-					color: #A1A1A1;
+					color: $color_meta;
 				}
-
 			}
 		}
 	}
@@ -275,7 +271,7 @@
 			margin-bottom: 16px;
 
 			& .project_inner {
-				border: 1px solid #d1d5da;
+				border: 1px solid $color_borders;
 				@include border-radius(3px);
 				padding: 16px;
 				align-content: stretch;
@@ -297,7 +293,7 @@
 
 			& .desc {
 				float: left;
-				color: #A1A1A1;
+				color: $color_meta;
 				font-size: 14px;
 				width: 100%;
 			}
@@ -310,7 +306,7 @@
 footer {
 	font-size: 14px;
 	margin-bottom: 75px;
-	color: #A1A1A1;
+	color: $color_meta;
 	text-align: right;
 
 	& a {
@@ -411,5 +407,89 @@ footer {
 
 	header #title {
 		display: none;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	html, body {
+		color: $color_dark_primary ;
+		background-color: $color_dark_background ;
+	}
+
+	a {
+		color: $color_dark_links;
+	}
+
+	h1 {
+		color: $color_dark_h1;
+	}
+
+	h2 {
+		color: $color_dark_h2;
+	}
+
+	.underline {
+		border-color: $color_dark_borders;
+	}
+
+	#fadeout {
+		display: none ;
+	}
+
+	header {
+		& #title {
+			color: $color_dark_title;
+		}
+	}
+
+	.icon_wrap {
+		color: $color_dark_icon;
+
+		.icon_instagram {
+			color: inherit;
+		}
+		.icon_linkedin {
+			color: inherit;
+		}
+		.icon_github {
+			color: inherit;
+		}
+	}
+
+	#projects_display {
+		& .project {
+			& .project_inner {
+				// border: 1px solid $color_borders;
+				border-color: rgba(0,0,0,0);
+				background-color: rgba(255,255,255,0.05);
+				&:hover {
+					border-color: rgba(0,0,0,0);
+					background-color: rgba(255,255,255,0.07);
+				}
+			}
+		}
+	}
+
+	article {
+		& .meta {
+			color: $color_dark_meta;
+		}
+		& .body {
+			& p {
+				color: $color_dark_secondary;
+			}
+			& blockquote {
+				& h3 {
+					color: $color_dark_secondary;
+				}
+				& p {
+					color: $color_dark_meta;
+				}
+			}
+		}
+	}
+
+	footer {
+		color: $color_dark_meta;
 	}
 }
