@@ -7,7 +7,7 @@ layout: default
 <div id="projects_display">
 {% for project in site.data.projects %}
   <div class="project">
-    <div class="project_inner clear">
+    <div class="box project_inner clear">
       <div class="name clear">
         <a href="{{ project.url }}">{{ project.name }}</a>
       </div>
