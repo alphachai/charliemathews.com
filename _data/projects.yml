@@ -4,6 +4,9 @@
 - name: lpipe
   desc: 🐑 Lambda Pipeline, a toolkit for writing clear, minimal Python FAAS
   url: https://github.com/mintel/lpipe
+- name: boto3-fixtures
+  desc: Python test fixtures for your local AWS cloud stack of choice
+  url: https://github.com/alphachai/boto3-fixtures
 - name: slosh
   desc: 💦 AWS S3 bucket API written in Python using FastAPI and Uvicorn
   url: https://github.com/alphachai/slosh

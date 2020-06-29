@@ -19,7 +19,7 @@ layout: default
 
 <!-- <hr class="underline"> -->
 
-## Timeline
+<!-- ## Timeline
 
 <ul id="feed">
   {% for post in site.posts %}
@@ -29,4 +29,4 @@ layout: default
     </li>
   {% endif %}
   {% endfor %}
-</ul>
+</ul> -->
