@@ -7,6 +7,6 @@
 - name: boto3-fixtures
   desc: Python test fixtures for your local AWS cloud stack of choice
   url: https://github.com/alphachai/boto3-fixtures
-- name: slosh
-  desc: 💦 AWS S3 bucket API written in Python using FastAPI and Uvicorn
-  url: https://github.com/alphachai/slosh
+- name: ezsqlx
+  desc: Simplify Golang database access with helpers for postgres + sqlx
+  url: https://github.com/tovala/ezsqlx
