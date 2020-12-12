@@ -8,5 +8,5 @@
   desc: Python test fixtures for your local AWS cloud stack of choice
   url: https://github.com/alphachai/boto3-fixtures
 - name: ezsqlx
-  desc: Simplify Golang database access with helpers for postgres + sqlx
+  desc: ✨ Simplify Golang database access with helpers for postgres + sqlx
   url: https://github.com/tovala/ezsqlx
